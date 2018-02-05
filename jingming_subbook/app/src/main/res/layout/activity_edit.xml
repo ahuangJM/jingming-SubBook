@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://stackoverflow.com/questions/39429946/how-to-change-the-datepicker-style-for-android-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alanj.jingming_subbook.EditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Subscription Name"
+            android:inputType="textPersonName"
+            android:maxLength="20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Started Date"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/editStartedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/date_picker_theme" />
+
+        <EditText
+            android:id="@+id/editMonthlyCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Monthly Charges (CAD)"/>
+
+        <EditText
+            android:id="@+id/editComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Comments"
+            android:inputType="textPersonName"
+            android:maxLength="30" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ConfirmButton_OnClick"
+            android:text="Confirm" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
